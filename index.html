@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEDVGWDBQN"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-ZEDVGWDBQN');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marina Parralo</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 200px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 100px auto;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="password"] {
+            margin-bottom: 10px;
+        }
+        .content {
+            font-size: 30px;              /* Tamanho da fonte */
+            text-align: center;           /* Alinhamento do texto */
+            margin: 0; 
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form action="pagina-destino.html" method="GET" onsubmit="return verificarSenha()">
+            <h1 class="content">Bem-vinda Marina Parralo</h1>
+            <input type="password" name="password" placeholder="Digite sua senha" id="password">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script>
+        function verificarSenha() {
+            var senha = document.getElementById('password').value;
+            // Coloque aqui a senha que você deseja verificar
+            var senhaCorreta = 'linda&maravilhosa&inteligente'; // Altere para a senha desejada
+            if (senha === senhaCorreta) {
+                return true; // Se a senha estiver correta, envia o formulário
+            } else {
+                alert('Senha incorreta!'); // Se a senha estiver errada, mostra um alerta
+                return false; // Impede o envio do formulário
+            }
+        }
+    </script>
+</body>
+</html>
